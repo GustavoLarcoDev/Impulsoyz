@@ -3,219 +3,297 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Impulsoyz - Soluciones de marketing digital y desarrollo web para impulsar tu negocio">
-    <meta name="keywords" content="marketing digital, desarrollo web, redes sociales, SEO, CRM, landing page">
-    <title>Impulsoyz - Marketing Digital y Desarrollo Web</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Impulsoyz - Agencia de Marketing Digital</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.ico">
+    
+    <!-- CSS Dependencies -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <nav class="navbar">
-            <div class="logo">Impulsoyz</div>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="assets/images/logo.svg" alt="Impulsoyz">
+            </a>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#portafolio">Portafolio</a></li>
+                <li><a href="#equipo">Equipo</a></li>
                 <li><a href="#planes">Planes</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#contacto" class="btn-primary">Contacto</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <main>
-        <section id="inicio" class="hero">
-            <div class="hero-content">
-                <h1>Impulsa tu Negocio al Siguiente Nivel</h1>
-                <p>Soluciones integrales de marketing digital y desarrollo web</p>
-                <a href="#planes" class="cta-button">Ver Planes</a>
-            </div>
-            <video class="background-video" autoplay loop muted playsinline>
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-video">
+            <video autoplay muted loop playsinline poster="Media/equipo.jpeg">
                 <source src="Media/pinterest.mp4" type="video/mp4">
             </video>
-        </section>
+        </div>
+        <div class="hero-content" data-aos="fade-up">
+            <h1 class="text-focus-in">Transformamos tu presencia digital</h1>
+            <p class="tracking-in-expand">Somos expertos en marketing digital, fotografía y desarrollo web</p>
+            <div class="hero-cta slide-in-bottom">
+                <a href="#servicios" class="btn-primary">Nuestros Servicios</a>
+                <a href="#portafolio" class="btn-secondary">Ver Portafolio</a>
+            </div>
+            <div class="scroll-indicator bounce">
+                <span class="mouse">
+                    <span class="wheel"></span>
+                </span>
+            </div>
+        </div>
+    </section>
 
-        <section id="servicios" class="services">
-            <h2>Nuestros Servicios</h2>
+    <!-- Services Section -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Nuestros Servicios</h2>
             <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-camera"></i>
+                <div class="service-card" data-aos="fade-up">
+                    <i class="fas fa-camera-retro"></i>
                     <h3>Fotografía Profesional</h3>
-                    <p>Capturamos la esencia de tu marca con fotografías de alta calidad</p>
-                    <img src="Media/WhatsApp Image 2025-02-18 at 21.42.16.jpeg" alt="Servicio de fotografía profesional" class="service-image">
+                    <p>Capturamos momentos únicos con un enfoque artístico y profesional</p>
                 </div>
-                <div class="service-card">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                     <i class="fas fa-video"></i>
                     <h3>Producción de Video</h3>
-                    <p>Contenido audiovisual que conecta con tu audiencia</p>
+                    <p>Creamos contenido audiovisual que cuenta tu historia</p>
                 </div>
-                <div class="service-card">
-                    <i class="fas fa-hashtag"></i>
-                    <h3>Gestión de Redes Sociales</h3>
-                    <p>Estrategias efectivas para aumentar tu presencia digital</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="planes" class="plans">
-            <h2>Planes de Desarrollo Web</h2>
-            <div class="plans-grid">
-                <div class="plan-card">
-                    <h3>Plan Standard</h3>
-                    <div class="price">Básico</div>
-                    <ul>
-                        <li>Landing page profesional</li>
-                        <li>Integración con redes sociales</li>
-                        <li>Optimización SEO</li>
-                        <li>Diseño responsive</li>
-                        <li>Aumenta tu visibilidad online</li>
-                    </ul>
-                    <a href="#contacto" class="plan-button">Contactar</a>
-                </div>
-                <div class="plan-card featured">
-                    <h3>Plan Premium</h3>
-                    <div class="price">Avanzado</div>
-                    <ul>
-                        <li>Todo del plan Standard</li>
-                        <li>Sitio web multipágina</li>
-                        <li>Catálogo de productos</li>
-                        <li>Automatización de emails</li>
-                        <li>Integración con WhatsApp</li>
-                    </ul>
-                    <a href="#contacto" class="plan-button">Contactar</a>
-                </div>
-                <div class="plan-card">
-                    <h3>Plan Master</h3>
-                    <div class="price">Completo</div>
-                    <ul>
-                        <li>Todo del plan Premium</li>
-                        <li>Sistema CRM personalizado</li>
-                        <li>Panel de administración</li>
-                        <li>Sistema de pedidos online</li>
-                        <li>Pagos seguros integrados</li>
-                    </ul>
-                    <a href="#contacto" class="plan-button">Contactar</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="equipo" class="team">
-            <h2>Equipos Profesionales</h2>
-            <p class="section-description">Contamos con el mejor equipo y tecnología para hacer realidad tu visión</p>
-            
-            <div class="media-gallery">
-                <div class="gallery-item image-item">
-                    <img src="Media/equipo.jpeg" alt="Equipo profesional de fotografía">
-                    <div class="overlay">
-                        <span>Equipo Fotográfico Profesional</span>
-                    </div>
-                </div>
-                <div class="gallery-item image-item">
-                    <img src="Media/equipo2.jpeg" alt="Equipo de producción">
-                    <div class="overlay">
-                        <span>Equipo de Producción</span>
-                    </div>
-                </div>
-                <div class="gallery-item image-item">
-                    <img src="Media/equipo3.jpeg" alt="Equipo de video">
-                    <div class="overlay">
-                        <span>Equipo Audiovisual</span>
-                    </div>
-                </div>
-                <div class="gallery-item video-item">
-                    <video autoplay loop muted playsinline>
-                        <source src="Media/equipo4.mp4" type="video/mp4">
-                    </video>
-                    <div class="overlay">
-                        <span>Producción en Acción</span>
-                    </div>
-                </div>
-                <div class="gallery-item video-item">
-                    <video autoplay loop muted playsinline>
-                        <source src="Media/equipo5.mp4" type="video/mp4">
-                    </video>
-                    <div class="overlay">
-                        <span>Sesiones Fotográficas</span>
-                    </div>
-                </div>
-                <div class="gallery-item video-item">
-                    <video autoplay loop muted playsinline>
-                        <source src="Media/equipo6.mp4" type="video/mp4">
-                    </video>
-                    <div class="overlay">
-                        <span>Trabajo en Equipo</span>
-                    </div>
-                </div>
-                <div class="gallery-item video-item">
-                    <video autoplay loop muted playsinline>
-                        <source src="Media/equipo7.mp4" type="video/mp4">
-                    </video>
-                    <div class="overlay">
-                        <span>Creatividad en Movimiento</span>
-                    </div>
-                </div>
-                <div class="gallery-item video-item">
-                    <video autoplay loop muted playsinline>
-                        <source src="Media/equipo8.mp4" type="video/mp4">
-                    </video>
-                    <div class="overlay">
-                        <span>Producción Profesional</span>
-                    </div>
-                </div>
-                <div class="gallery-item video-item">
-                    <video autoplay loop muted playsinline>
-                        <source src="Media/equipo9.mp4" type="video/mp4">
-                    </video>
-                    <div class="overlay">
-                        <span>Experiencia Visual</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contacto" class="contact">
-            <h2>Contáctanos</h2>
-            <div class="contact-container">
-                <form id="contact-form" class="contact-form">
-                    <input type="text" placeholder="Nombre" required>
-                    <input type="email" placeholder="Email" required>
-                    <select required>
-                        <option value="">Selecciona un plan</option>
-                        <option value="standard">Plan Standard</option>
-                        <option value="premium">Plan Premium</option>
-                        <option value="master">Plan Master</option>
-                    </select>
-                    <textarea placeholder="Mensaje" required></textarea>
-                    <button type="submit" class="submit-button">Enviar Mensaje</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>Impulsoyz</h4>
-                <p>Transformando negocios a través de soluciones digitales innovadoras</p>
-            </div>
-            <div class="footer-section">
-                <h4>Contacto</h4>
-                <p>Email: contacto@impulsoyz.com</p>
-                <p>Tel: (123) 456-7890</p>
-            </div>
-            <div class="footer-section">
-                <h4>Síguenos</h4>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-code"></i>
+                    <h3>Desarrollo Web</h3>
+                    <p>Diseñamos y desarrollamos sitios web modernos y responsivos</p>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Impulsoyz. Todos los derechos reservados.</p>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portafolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title text-focus-in" data-aos="fade-up">Nuestro Portafolio</h2>
+            <div class="portfolio-slider swiper" data-aos="fade-up">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="Media/WhatsApp Image 2025-02-18 at 21.42.16.jpeg" alt="Proyecto 1 - Diseño Web">
+                        <div class="portfolio-info">
+                            <h3>Diseño Web Corporativo</h3>
+                            <p>Desarrollo web y branding</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Media/WhatsApp Image 2025-02-18 at 22.38.57.jpeg" alt="Proyecto 2 - Marketing Digital">
+                        <div class="portfolio-info">
+                            <h3>Campaña Digital</h3>
+                            <p>Marketing y redes sociales</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Media/equipo2.jpeg" alt="Proyecto 3 - Fotografía">
+                        <div class="portfolio-info">
+                            <h3>Sesión Corporativa</h3>
+                            <p>Fotografía profesional</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Media/equipo3.jpeg" alt="Proyecto 4 - Fotografía">
+                        <div class="portfolio-info">
+                            <h3>Fotografía de Producto</h3>
+                            <p>E-commerce y catálogos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="equipo" class="team">
+        <div class="container">
+            <h2 class="section-title text-focus-in" data-aos="fade-up">Nuestro Equipo</h2>
+            <div class="team-content">
+                <div class="team-video-grid" data-aos="fade-right">
+                    <video autoplay muted loop playsinline class="video-1">
+                        <source src="Media/equipo 6.mp4" type="video/mp4">
+                    </video>
+                    <video autoplay muted loop playsinline class="video-2">
+                        <source src="Media/equipo 9.mp4" type="video/mp4">
+                    </video>
+                    <video autoplay muted loop playsinline class="video-3">
+                        <source src="Media/equipo4.mp4" type="video/mp4">
+                    </video>
+                    <video autoplay muted loop playsinline class="video-4">
+                        <source src="Media/equipo5.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="team-stats" data-aos="fade-left">
+                    <div class="stat slide-in-bottom">
+                        <span class="number counter">150</span>
+                        <span class="label">Proyectos Completados</span>
+                    </div>
+                    <div class="stat slide-in-bottom" data-aos-delay="100">
+                        <span class="number counter">12</span>
+                        <span class="label">Años de Experiencia</span>
+                    </div>
+                    <div class="stat slide-in-bottom" data-aos-delay="200">
+                        <span class="number counter">98</span>
+                        <span class="label">Clientes Satisfechos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plans Section -->
+    <section id="planes" class="plans">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Nuestros Planes</h2>
+            <div class="plans-grid">
+                <div class="plan-card" data-aos="fade-up">
+                    <h3>Básico</h3>
+                    <div class="price">$999</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Sesión fotográfica básica</li>
+                        <li><i class="fas fa-check"></i> 5 fotos editadas</li>
+                        <li><i class="fas fa-check"></i> Entrega digital</li>
+                    </ul>
+                    <a href="#contacto" class="btn-secondary">Elegir Plan</a>
+                </div>
+                <div class="plan-card featured" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Profesional</h3>
+                    <div class="price">$1,999</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Sesión fotográfica completa</li>
+                        <li><i class="fas fa-check"></i> 15 fotos editadas</li>
+                        <li><i class="fas fa-check"></i> Video promocional</li>
+                        <li><i class="fas fa-check"></i> Entrega digital y física</li>
+                    </ul>
+                    <a href="#contacto" class="btn-primary">Elegir Plan</a>
+                </div>
+                <div class="plan-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Premium</h3>
+                    <div class="price">$2,999</div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Sesión fotográfica ilimitada</li>
+                        <li><i class="fas fa-check"></i> 30 fotos editadas</li>
+                        <li><i class="fas fa-check"></i> Video promocional profesional</li>
+                        <li><i class="fas fa-check"></i> Sitio web básico</li>
+                        <li><i class="fas fa-check"></i> Entrega digital y física</li>
+                    </ul>
+                    <a href="#contacto" class="btn-secondary">Elegir Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Contáctanos</h2>
+            <div class="contact-content">
+                <form id="contact-form" class="contact-form" data-aos="fade-up">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Nombre</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <select id="service" name="service" required>
+                            <option value="">Selecciona un servicio</option>
+                            <option value="fotografia">Fotografía</option>
+                            <option value="video">Video</option>
+                            <option value="web">Desarrollo Web</option>
+                        </select>
+                        <label for="service">Servicio</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" required></textarea>
+                        <label for="message">Mensaje</label>
+                    </div>
+                    <button type="submit" class="btn-primary">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/images/logo.svg" alt="Impulsoyz">
+                    <p>Transformando ideas en experiencias digitales memorables</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#portafolio">Portafolio</a></li>
+                        <li><a href="#equipo">Equipo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-phone"></i> +52 123 456 7890</p>
+                    <p><i class="fas fa-envelope"></i> contacto@impulsoyz.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Machala, Ecuador</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Impulsoyz. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
 
+    <!-- JavaScript Dependencies -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="script.js"></script>
 </body>
 </html>

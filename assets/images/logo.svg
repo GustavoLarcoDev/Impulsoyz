@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="50" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20 10h10v30H20z" fill="#2563eb"/>
+    <path d="M40 10h10v30H40z" fill="#10b981"/>
+    <text x="60" y="35" font-family="Arial" font-size="24" font-weight="bold" fill="#1f2937">Impulsoyz</text>
+</svg>
