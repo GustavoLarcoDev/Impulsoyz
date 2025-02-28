@@ -1,0 +1,11 @@
+{
+  "name": "impulsoyz",
+  "version": "1.0.0",
+  "description": "Impulsoyz Website",
+  "scripts": {
+    "start": "live-server --port=8000 --no-browser"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
